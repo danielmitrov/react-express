@@ -7,7 +7,16 @@ import classes from './styles.less';
 class App extends React.Component {
   render() {
     const { name } = this.props;
-    return <h1 className={classes.a}>Hello {name}</h1>;
+    let env = "";
+
+    if (API_URL === "http://localhost:8080/") {
+      env = "PROD";
+    } else if (API_URL === "http://localhost:5000/") {
+      env = "DEV";
+    }
+
+
+    return <h1 className={classes.a}>Hello {name} {env}</h1>;
   }
 }
 

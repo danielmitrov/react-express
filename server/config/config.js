@@ -3,6 +3,6 @@ module.exports = {
         port: 5000,
     },
     prod: {
-        port: 80,
+        port: 8080,
     },
 }
