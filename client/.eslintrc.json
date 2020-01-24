@@ -1,5 +1,7 @@
 {
-  "rules": {},
+  "rules": {
+    "indent": ["error", 4]
+  },
   "env": {
     "es6": true,
     "browser": true
@@ -11,7 +13,7 @@
       "jsx": true
     }
   },
-  "extends": "eslint:recommended",
+  "extends": "airbnb",
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"

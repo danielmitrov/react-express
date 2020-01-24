@@ -7,7 +7,7 @@ const API_URL = {
 };
 
 const getApiURL = () => {
-    if (process.env.NODE_ENV === "dev") {
+    if (process.env.NODE_ENV === 'dev') {
         return API_URL.dev;
     }
 
@@ -17,56 +17,56 @@ const getApiURL = () => {
 const config = {
     entry: [
         'react-hot-loader/patch',
-        './src/index.js'
+        './src/index.js',
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     plugins: [
         new webpack.DefinePlugin({
-            'API_URL': getApiURL(),
-        })
+            API_URL: getApiURL(),
+        }),
     ],
     module: {
         rules: [{
-                test: /\.(js|jsx)$/,
-                use: 'babel-loader',
-                exclude: /node_modules/
+            test: /\.(js|jsx)$/,
+            use: 'babel-loader',
+            exclude: /node_modules/,
+        },
+        {
+            test: /\.less$/,
+            use: [{
+                loader: 'style-loader',
             },
             {
-                test: /\.less$/,
-                use: [{
-                        loader: 'style-loader'
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true,
+                    modules: {
+                        localIdentName: '[local]___[hash:base64:5]',
                     },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                            modules: {
-                                localIdentName: '[local]___[hash:base64:5]'
-                            },
-                        }
-                    },
-                    {
-                        loader: 'less-loader'
-                    }
-                ]
-            }
-        ]
+                },
+            },
+            {
+                loader: 'less-loader',
+            },
+            ],
+        },
+        ],
     },
     resolve: {
         extensions: [
             '.js',
-            '.jsx'
+            '.jsx',
         ],
         alias: {
-            'react-dom': '@hot-loader/react-dom'
-        }
+            'react-dom': '@hot-loader/react-dom',
+        },
     },
     devServer: {
-        contentBase: './dist'
-    }
+        contentBase: './dist',
+    },
 };
 
 module.exports = config;
