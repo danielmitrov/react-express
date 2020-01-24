@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=prod node ./bin/www",
-    "dev": "cross-env NODE_ENV=dev node ./bin/www"
+    "dev": "cross-env NODE_ENV=dev node ./bin/www",
+    "lint": "eslint .",
+    "fix:lint": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "cross-env": "^6.0.3"
+    "cross-env": "^6.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0"
   }
 }

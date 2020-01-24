@@ -12,8 +12,8 @@ TestMiddleware.signMiddleware(app);
 app.use(bodyParser.json());
 app.use('/api', routes);
 app.use(express.static('../client/dist'));
-  
+
 module.exports = {
     app,
-    port
+    port,
 };

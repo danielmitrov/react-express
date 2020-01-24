@@ -10,8 +10,8 @@ class Controller {
         const baseControllerMethods = Object.getOwnPropertyNames(Controller.prototype);
 
         let methods = Object.getOwnPropertyNames(this.constructor.prototype);
-        methods = methods.filter(x => !baseControllerMethods.includes(x));
-        
+        methods = methods.filter((x) => !baseControllerMethods.includes(x));
+
         methods.forEach((methodName) => {
             this[methodName]();
         });

@@ -1,10 +1,10 @@
 class Middleware {
-    createMiddleware() {
-        throw new Error("Not implemented");
+    createMiddleware() { // eslint-disable-line class-methods-use-this
+        throw new Error('Not implemented');
     }
 
-    static signMiddleware(app) {
-        throw new Error("Not implemented");
+    static signMiddleware(app) { // eslint-disable-line no-unused-vars
+        throw new Error('Not implemented');
     }
 }
 

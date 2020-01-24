@@ -5,4 +5,4 @@ module.exports = {
     prod: {
         port: 8080,
     },
-}
+};
