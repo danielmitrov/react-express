@@ -1,16 +1,17 @@
 {
-  "name": "mern",
+  "name": "react-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "An example react-express app",
   "main": "index.js",
   "scripts": {
     "start": "cd client && npm run build-prod && cd ../server && npm start",
+    "postinstall": "cd client && npm install && cd ../server && npm install",
     "dev:start-server": "cd server && npm run dev",
     "dev:start-client": "cd client && npm start",
     "dev": "concurrently \"npm run dev:start-server\" \"npm run dev:start-client\" --names \"SERVER,CLIENT\" -c \"bgRed.bold,bgBlue.bold\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Mitrov",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^5.0.2"
