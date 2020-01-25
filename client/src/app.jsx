@@ -2,7 +2,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root';
 
-import classes from './styles.less';
+import Button from './components/button';
+
 
 class App extends React.PureComponent {
     render() {
@@ -16,9 +17,15 @@ class App extends React.PureComponent {
 
 
         return (
-            <h1 className={classes.a}>
-                Hello {env}
-          </h1>
+            <div>
+                <h1>
+                    Hello
+                    {env}
+                </h1>
+                <Button onClick={() => alert()}>
+                    Click Me!
+                </Button>
+            </div>
         );
     }
 }
