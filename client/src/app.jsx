@@ -4,25 +4,21 @@ import { hot } from 'react-hot-loader/root';
 
 import Button from './components/button';
 
+import './app.less';
+
 
 class App extends React.PureComponent {
     render() {
-        let env = '';
-
-        if (API_URL === 'http://localhost:8080/') {
-            env = 'PROD';
-        } else if (API_URL === 'http://localhost:5000/') {
-            env = 'DEV';
-        }
-
-
         return (
             <div>
                 <h1>
-                    Hello {env}
+                    Hello World!
                 </h1>
-                <Button onClick={() => alert()}>
-                    Click Me!
+                <div>
+                    API url- {API_URL}
+                </div>
+                <Button onClick={() => alert('Hello World')}>
+                    Example Button
                 </Button>
             </div>
         );
