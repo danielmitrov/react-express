@@ -1,5 +1,5 @@
 class Middleware {
-    createMiddleware() { // eslint-disable-line class-methods-use-this
+    static getMiddleware() {
         throw new Error('Not implemented');
     }
 
