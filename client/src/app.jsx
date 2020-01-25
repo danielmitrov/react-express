@@ -19,8 +19,7 @@ class App extends React.PureComponent {
         return (
             <div>
                 <h1>
-                    Hello
-                    {env}
+                    Hello {env}
                 </h1>
                 <Button onClick={() => alert()}>
                     Click Me!

@@ -1,6 +1,18 @@
 {
+  "root": true,
   "rules": {
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "react/jsx-indent" : ["error", 4],
+    "import/order": ["error",
+      {
+        "groups": [
+          ["builtin", "external"]
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "import/newline-after-import": ["error", { "count": 2 }]
   },
   "env": {
     "es6": true,
@@ -16,7 +28,8 @@
   "extends": "airbnb",
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "API_URL": "readonly"
   },
   "plugins": [
     "react"

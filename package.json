@@ -7,13 +7,21 @@
     "start": "cd client && npm run build-prod && cd ../server && npm start",
     "dev:start-server": "cd server && npm run dev",
     "dev:start-client": "cd client && npm start",
-    "dev": "concurrently \"npm run dev:start-server\" \"npm run dev:start-client\" --names \"SERVER,CLIENT\" -c \"bgRed.bold,bgBlue.bold\"",
-    "lint": "cd client && npm run lint && cd ../server && npm run lint"
+    "dev": "concurrently \"npm run dev:start-server\" \"npm run dev:start-client\" --names \"SERVER,CLIENT\" -c \"bgRed.bold,bgBlue.bold\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
   }
 }
