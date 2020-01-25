@@ -8,7 +8,7 @@ This is an example of react and express app. All the configurations have been ma
 Clone the project and install it by using npm.
 
 ```bash
-git clone https://github.com/danielmitrov2/react-express.git
+git clone https://github.com/danielmitrov/react-express.git
 cd react-express
 npm install
 ```
@@ -47,15 +47,15 @@ class Products extends Controller {
 
 module.exports = Products;
 ```
-and then export an instance of it in the `index.js`. For example:
+And then export an instance of it in the `index.js`:
 ```javascript
 module.exports = generateRoutes([
     new Products(),
 ]);
 ``` 
-The function `generateRoutes` will run all the functions inside `Products` and will generate an Express Router instance which will automatically be bounded to `/api/Product`.
+The function `generateRoutes` will run all the functions inside `Products`'s instance and will generate an Express Router instance which will automatically be bounded to `/api/Product`.
 
-Each controller you export has it's routes under `/api/ControllerName/`.
+Each controller you export, has it's routes under `/api/ControllerName/`.
 The methods in the controller can use 
 ```javascript
 this.router
