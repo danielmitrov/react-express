@@ -1,7 +1,16 @@
 {
   "root": true,
   "rules": {
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "import/order": ["error",
+      {
+        "groups": [
+          ["builtin", "external"]
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/newline-after-import": ["error", { "count": 2 }]
   },
   "extends": "airbnb-base"
 }
