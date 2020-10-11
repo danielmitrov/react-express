@@ -1,28 +1,26 @@
 {
-  "name": "react-express",
+  "name": "project-example",
   "version": "1.0.0",
-  "description": "An example react-express app",
-  "main": "index.js",
   "scripts": {
-    "start": "cd client && npm run build-prod && cd ../server && npm start",
-    "postinstall": "cd client && npm install && cd ../server && npm install",
-    "dev:start-server": "cd server && npm run dev",
-    "dev:start-client": "cd client && npm start",
-    "dev": "concurrently \"npm run dev:start-server\" \"npm run dev:start-client\" --names \"SERVER,CLIENT\" -c \"bgRed.bold,bgBlue.bold\""
+    "start": "cd packages/server && npm start",
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build",
+    "dev:server": "cd packages/server && npm run dev",
+    "dev:client": "cd packages/client && npm start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\" --names \"SERVER,CLIENT\" -c \"bgRed.bold,bgBlue.bold\""
   },
-  "keywords": [],
-  "author": "Daniel Mitrov",
-  "license": "ISC",
   "dependencies": {
     "concurrently": "^5.0.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
-    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
-  }
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "lerna": "^3.22.1"
+  },
+  "main": "./server/dist/index.js"
 }

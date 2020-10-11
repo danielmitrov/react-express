@@ -1,7 +1,0 @@
-{
-    "eslint.enable": true,
-    "eslint.workingDirectories": [
-        "client",
-        "server"
-    ]
-}
